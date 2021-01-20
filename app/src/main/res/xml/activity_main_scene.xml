@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Transition
+        android:id="@+id/transitionInitial"
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/initialEnd"
+        motion:constraintSetStart="@id/initialStart"
+        motion:duration="2500">
+        <KeyFrameSet>
+            <!-- IMAGE -->
+            <KeyAttribute
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:translationY="120dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/viewPager" />
+
+            <KeyAttribute
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:translationY="120dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/viewPager" />
+
+            <KeyAttribute
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                android:translationY="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/viewPager" />
+
+            <!-- KEYHOLE -->
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="2.0"
+                android:scaleY="2.0"
+                android:translationY="-100dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="2.0"
+                android:scaleY="2.0"
+                android:translationY="-100dp"
+                motion:framePosition="25"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:translationY="70dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <!-- GRADIENT -->
+            <KeyAttribute
+                android:translationY="220dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/imgWhiteGradient" />
+
+            <KeyAttribute
+                android:translationY="220dp"
+                motion:framePosition="40"
+                motion:motionTarget="@+id/imgWhiteGradient" />
+
+            <KeyAttribute
+                android:translationY="30dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imgWhiteGradient" />
+
+            <!-- LABELS -->
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/txtLabel1" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/txtLabel1" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/txtLabel1" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutDescription" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/motionLayoutDescription" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutDescription" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/initialStart">
+
+        <Constraint
+            android:id="@+id/imgKeyHole1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/initialEnd">
+        <Constraint
+            android:id="@+id/imgKeyHole1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <Constraint
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transitionSwipe"
+        motion:constraintSetEnd="@id/swipeEnd"
+        motion:constraintSetStart="@id/swipeStart"
+        motion:duration="800">
+
+        <!--        <OnClick-->
+        <!--            motion:clickAction="transitionToEnd"-->
+        <!--            motion:targetId="@+id/imgWhiteGradient" />-->
+
+        <KeyFrameSet>
+            <!-- KEYHOLE 1 -->
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <KeyAttribute
+                android:translationX="-70dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imgKeyHole1" />
+
+            <!-- KEYHOLE 2 -->
+            <KeyAttribute
+                android:translationX="70dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/imgKeyHole2" />
+
+            <KeyAttribute
+                android:translationX="70dp"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/imgKeyHole2" />
+
+            <KeyAttribute
+                android:translationX="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/imgKeyHole2" />
+
+            <!-- LABELS -->
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/txtLabel1" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/txtLabel1" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutDescription" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutDescription" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/swipeStart">
+        <Constraint
+            android:id="@+id/imgKeyHole1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:translationY="70dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/txtLabel1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/imgWhiteGradient"
+            motion:layout_constraintVertical_bias=".55" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/swipeEnd">
+        <Constraint
+            android:id="@+id/imgKeyHole1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:translationY="70dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/txtLabel1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/imgWhiteGradient"
+            motion:layout_constraintVertical_bias=".55" />
+    </ConstraintSet>
+</MotionScene>

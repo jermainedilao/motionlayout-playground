@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GiggleMotionLayout</string>
+    <string name="giggle">giggle</string>
+    <string name="a_social_media_platform">a social media platform</string>
+    <string name="say_something_publicly">say something publicly</string>
+    <string name="connect_privately">connect privately</string>
+</resources>
