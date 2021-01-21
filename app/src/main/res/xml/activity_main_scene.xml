@@ -103,6 +103,51 @@
                 android:alpha="1.0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/motionLayoutDescription" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator1" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/motionLayoutIndicator1" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator1" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator2" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/motionLayoutIndicator2" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator2" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator3" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/motionLayoutIndicator3" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator3" />
         </KeyFrameSet>
     </Transition>
 
@@ -211,6 +256,36 @@
                 android:alpha="1"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/motionLayoutDescription" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator1" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator1" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator2" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator2" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/motionLayoutIndicator3" />
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/motionLayoutIndicator3" />
         </KeyFrameSet>
     </Transition>
 
