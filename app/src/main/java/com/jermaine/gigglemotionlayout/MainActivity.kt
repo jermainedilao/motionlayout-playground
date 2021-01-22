@@ -25,21 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         setupViewPager()
-
-//        binding.imgWhiteGradient.setOnClickListener {
-//            binding.viewPager.setCurrentItem(
-//                when (binding.viewPager.currentItem) {
-//                    0 -> 1
-//                    1 -> 2
-//                    2 -> 0
-//                    else -> {
-//                        throw IllegalArgumentException("Invalid position!")
-//                    }
-//                },
-//                true
-//            )
-//        }
-
         setupMotionLayout()
     }
 
